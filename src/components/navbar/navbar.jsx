@@ -48,7 +48,7 @@ const navbar = () => {
 
 
       </div>
-      <h1>LOGO</h1>
+      <a href="/"><h1>LOGO</h1></a>
       <Links />
     </header>
     <nav className={Styles.navbar}>
