@@ -1,0 +1,179 @@
+.createPost {
+    padding: 5rem 0;
+}
+
+.createPost textarea {
+    width: 100%;
+    min-height: 50vh;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 2rem;
+    font-size: 40px;
+    color: var(--dark-yellow);
+}
+
+.createPost input[type=text]{
+    padding: 0 2rem;
+    font-size: 45px;
+    border: none;
+    display: block;
+     background-color: transparent;
+     margin: 2rem 0;
+     outline: none;
+}
+
+.createPost input[type=file]{
+    display: none;
+}
+
+.file {
+    display: block;
+    text-align: center;
+    margin: 0 2rem;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--dark-yellow);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.createPost select {
+    display: block;
+    padding:  2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    margin: 2rem 0;
+    width: 70%;
+    outline: none;
+    text-align: center;
+}
+
+.createPost textarea::placeholder {
+    font-size: 40px;
+}
+
+.btns {
+    padding: 0 2rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.btns button {
+    padding: 1rem 2rem;
+    border: none;
+    background-color: #E76F51;
+    color: white;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 900px){
+    .createPost {
+        padding: 4rem 0;
+    }
+    
+    .createPost textarea {
+        min-height: 50vh;
+        padding: 0 2rem;
+        font-size: 40px;
+    }
+    
+    .createPost input[type=text]{
+        font-size: 40px;
+        margin: 2rem 0;
+    }
+    
+    
+    .file {
+        height: 90px;
+        width: 90px;
+    }
+    
+    .createPost select {
+        padding:  2rem;
+        font-size: 25px;
+        margin: 2rem 0;
+        width: 80%;
+    }
+    
+    .createPost textarea::placeholder {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .createPost {
+        padding: 3rem 0;
+    }
+    
+    .createPost textarea {
+        min-height: 40vh;
+        padding: 0 2rem;
+        font-size: 30px;
+    }
+    
+    .createPost input[type=text]{
+        font-size: 30px;
+        margin: 2rem 0;
+    }
+    
+    
+    .file {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .createPost select {
+        padding:  1.5rem;
+        font-size: 20px;
+        margin: 2rem 0;
+        width: 80%;
+    }
+    
+    .createPost textarea::placeholder {
+        font-size: 30px;
+    }
+
+    .btns {
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+    
+    .btns button {
+        padding: 1rem 1.5rem;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    
+    .createPost textarea {
+        font-size: 25px;
+    }
+    
+    .createPost input[type=text]{
+        font-size: 25px;
+    }
+    
+    .createPost select {
+        font-size: 17px;
+    }
+    
+    .createPost textarea::placeholder {
+        font-size: 25px;
+    }
+
+    .btns {
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+    
+    .btns button {
+        padding: 1rem;
+        font-size: 14px;
+    }
+}

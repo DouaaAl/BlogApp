@@ -1,0 +1,199 @@
+.main {
+    margin: 5rem auto;
+    width: 90%;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.main article {
+    width: 80%;
+}
+
+.main article div {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.main article h3 {
+    font-size: 25px;
+}
+
+.changeBtn {
+    padding: 0.5rem 2rem;
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    background-color: #2A9D8F;
+    color: white;
+}
+
+.submitBtn {
+    padding: 1rem 2.5rem;
+    font-size: 20px;
+    font-weight: 800;
+    border: none;
+    background-color: #9A031E;
+    color: var(--light-yellow);
+}
+
+.main article input {
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid var(--dark-yellow);
+    outline: none;
+    padding-left: 7px;
+}
+
+.profilePic {
+    border-radius: 50%;
+}
+
+.error {
+    margin: 1rem 0 ;
+    font-size: 20px;
+    color: red;
+}
+
+.success {
+    margin: 1rem 0 ;
+    font-size: 20px;
+    color: rgb(0, 162, 119);
+}
+
+.imageUploader {
+    display: block;
+    margin: 3rem 0;
+    padding: 1rem 2rem;
+    background-color: var(--dark-yellow);
+    color: var(--light-yellow);
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.imageUploaderBtn {
+    display: block;
+    padding: 0.5rem;
+    background-color: var(--medium-yellow);
+    width: fit-content;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: var(--light-yellow);
+}
+
+@media screen and (max-width: 780px){
+
+    .title {
+        text-align: center;
+        font-size: 40px;
+    }
+    
+    .main article {
+        width: 90%;
+    }
+    
+    .main article div {
+        margin: 1.5rem 0;
+    }
+    
+    .main article h3 {
+        font-size: 20px;
+    }
+    
+    .changeBtn {
+        padding: 0.5rem 1.5rem;
+        font-size: 16px;
+    }
+    
+    .submitBtn {
+        padding: 1rem 2rem;
+        font-size: 18px;
+    }
+    
+    .main article input {
+        width: 270px;
+        height: 35px;
+    }
+    
+    .error {
+        margin: 1rem 0 ;
+        font-size: 18px;
+    }
+    
+    .success {
+        margin: 1rem 0 ;
+        font-size: 18px;
+    }
+    
+    .imageUploader {
+        margin: 2.5rem 0;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+    }
+    
+    .imageUploaderBtn {
+        padding: 0.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+
+    .title {
+        font-size: 28px;
+    }
+    
+    .main article {
+        width: 100%;
+    }
+    
+    
+    .main article h3 {
+        font-size: 18px;
+    }
+    
+    .changeBtn {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+    }
+    
+    .submitBtn {
+        padding: 0.5rem 1.2rem;
+        font-size: 18px;
+    }
+    
+    .main article input {
+        width: 250px;
+        height: 32px;
+    }
+    
+    .error {
+        margin: 1rem 0 ;
+        font-size: 16px;
+    }
+    
+    .success {
+        margin: 1rem 0 ;
+        font-size: 16px;
+    }
+    
+    .imageUploader {
+        margin: 2rem 0;
+        padding: 1rem;
+    }
+    
+    .imageUploaderBtn {
+        padding: 0.5rem;
+    }
+    
+    .main article div {
+        flex-direction: column;
+    }
+}

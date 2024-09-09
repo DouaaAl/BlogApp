@@ -1,0 +1,43 @@
+.comment {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid #f48b29;
+}
+
+
+.comment div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profilePic {
+    border-radius: 50%;
+}
+
+.comment p {
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+
+.likes span {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-right: 20px;
+}
+
+.likes span h5 {
+    font-size: 18px;
+}
+
+.green {
+    color: #264653;
+}
+
+.red {
+    color: #E76F51;
+}

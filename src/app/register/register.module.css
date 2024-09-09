@@ -1,0 +1,72 @@
+.register {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register h1 {
+    font-size: 45px;
+    color: white;
+    margin: 2rem auto;
+}
+
+.register article {
+    background-color: #E76F51;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+}
+
+.register article form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.register article form input {
+    border: none;
+    border-bottom: 1px solid var(--light-yellow);
+    background-color: transparent;
+    outline: none;
+    margin: 20px 0;
+    min-width: 300px;
+    font-size: 18px;
+    color: white;
+}
+
+.register article form input::placeholder {
+    color: var(--light-yellow);
+}
+
+.register article form button {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    background-color: white;
+    font-size: 20px;
+    border: none;
+    color: var(--dark-yellow);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.register form div {
+    display: flex;
+    gap: 2rem;
+}
+
+.error {
+    font-size: 20px;
+    color: red;
+    margin: 1rem auto;
+}
+
+.success {
+    font-size: 20px;
+    color: rgb(14, 168, 14);
+    margin: 1rem auto;
+}

@@ -1,0 +1,25 @@
+.loading {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--light-yellow);
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading img {
+    z-index: 555656;
+    transform: scale(2);
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg) scale(2);
+    }
+    to{
+        -webkit-transform: rotate(360deg) scale(2);
+    }
+}

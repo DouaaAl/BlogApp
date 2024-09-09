@@ -1,0 +1,160 @@
+.categories {
+    padding: 5rem 0;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 5rem;
+}
+
+.addCategory {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.addCategory input {
+    height: 50px;
+    width: 80%;
+    padding: 7px;
+    outline: none;
+    border: 1px solid var(--medium-yellow);
+
+}
+
+.addCategory button {
+    height: 50px;
+    background-color: #A4133C;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 800;
+    padding: 0 1rem;
+    width: 20%;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    width: 60%;
+    margin: 4rem auto;
+    background-color: white;
+    text-align: center;
+}
+
+.list li {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    border: 1px solid var(--dark-yellow);
+}
+
+.list li div,
+.list li form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+}
+
+.list li div h3,
+.list li form > * {
+    padding: 1rem 2rem;
+    display: block;
+    border: none;
+    border-right: 1px solid var(--medium-yellow);
+    height: 100%;
+    width: 100%;
+    outline: none;
+}
+
+.list li form button {
+    background-color: var(--medium-yellow);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 900px){
+    .title {
+        font-size: 40px;
+    }
+    .form {
+        margin: 2.5rem auto;
+    }
+    
+    .form input {
+        padding: 5px;
+        height: 45px;
+    }
+    
+    .form button {
+        height: 45px;
+        padding: 0rem 1.5rem;
+    }
+    
+    .list {
+        margin: 2.5rem auto;
+    }
+    .list article h3 {
+        font-size: 15px;
+        padding: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .title {
+        font-size: 35px;
+    }
+    .form {
+        margin: 2.5rem auto;
+    }
+    
+    .form input {
+        height: 40px;
+    }
+    
+    .form button {
+        font-size: 14px;
+        height: 40px;
+        padding: 0rem 1rem;
+    }
+    
+    .list {
+        margin: 2rem auto;
+    }
+    .list article h3 {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .title {
+        font-size: 30px;
+    }
+    .list article h3 {
+        font-size: 12px;
+    }
+
+    .form button {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .title {
+        font-size: 25px;
+    }
+    .list article h3 {
+        font-size: 10px;
+    }
+}

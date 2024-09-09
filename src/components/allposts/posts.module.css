@@ -1,0 +1,31 @@
+.posts{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.pagination{
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+}
+
+.pagination span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 2rem 0;
+}
+
+@media screen and (max-width:900px){
+    .posts{
+        width: 80%;
+    }
+}

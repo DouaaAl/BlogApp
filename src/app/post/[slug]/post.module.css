@@ -1,0 +1,149 @@
+.post, .postForm, .comments {
+    width: 60%;
+    padding: 4rem 0;
+    margin: 0 auto;
+}
+
+.post img {
+    width: 100%;
+}
+
+.changes {
+    padding: 2rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.changes button {
+    padding: 1rem 2rem;
+    font-size: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.changes button{
+    background-color: #003049;
+}
+
+.changes button:nth-child(2) {
+    background-color: #C1121F;
+}
+
+
+.category,
+.postForm input:first-child {
+    font-size: 20px;
+    margin: 1rem 0;
+    text-decoration: underline;
+}
+
+.title,
+.postForm input:nth-child(2) {
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+.post p,
+.postForm textarea {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+/* Post Form */
+
+.postForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.postForm input,
+.postForm textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+.postForm button {
+    padding: 2rem 0;
+    font-size: 35px;
+    font-weight: 800;
+    background-color: var(--medium-yellow);
+    border: none;
+    cursor: pointer;
+}
+
+.profilePic {
+    display: block;
+    border-radius: 50%;
+}
+
+.profileTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.postTitleForm {
+    margin: 3rem 0;
+    font-size: 45px;
+    border-bottom: 1px solid var(--dark-yellow);
+}
+
+
+/**** Commets ****/
+
+.comments form {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.comments h1 {
+    font-size: 40px;
+    margin: 3rem 0;
+}
+
+
+.comments form input,
+.comments form textarea {
+    background-color: transparent;
+    outline: none;
+    padding: 7px 8px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid var(--medium-yellow);
+}
+
+
+.comments form button {
+    padding: 1rem 0;
+    font-size: 25px;
+    background-color: var(--medium-yellow);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.error {
+    margin: 1rem 0;
+    color: red;
+    font-size: 24px;
+}
+
+.showComment {
+    display: block;
+    padding: 1.5rem 1rem;
+    color: var(--light-yellow);
+    border: none;
+    background-color: var(--dark-yellow);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
