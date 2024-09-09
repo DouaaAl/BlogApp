@@ -9,7 +9,7 @@ import { useState } from 'react'
 import {useRouter} from "next/navigation"
 
 
-const page = ({children, href}: {children: any, href: any}) => {
+const Page = () => {
 
   const router = useRouter();
   const [err, useErrState] = useState({
@@ -19,7 +19,7 @@ const page = ({children, href}: {children: any, href: any}) => {
   const [fill, useSFillState] = useState(false)
   const [loading, setLoading] = useState(false);
 
-  const login = async(e) =>{
+  const login = async(e: any) =>{
     e.preventDefault();
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData.entries());
@@ -31,7 +31,7 @@ const page = ({children, href}: {children: any, href: any}) => {
       return;
     }
     else{
-      await localStorage.setItem("user", user.user)
+      await localStorage.setItem("user", user?.user as string)
       router.push("/");
     }
   }
@@ -60,4 +60,4 @@ const page = ({children, href}: {children: any, href: any}) => {
   )
 }
 
-export default page
+export default Page
