@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Navbar from "@/components/navbar/navbar.jsx";
+import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import Styles from "./create.module.css";
 import { findCategories, createPost } from "@/lib/post";
@@ -10,12 +10,16 @@ import { useRouter } from "next/navigation";
 import Loading from "@/components/loading/loading";
 import { uploadFiletoS3 } from "@/lib/image";
 
-const Create = () => {
+interface User {
+  email: string;
+}
+
+const Create: React.FC = () => {
   const router = useRouter();
-  const [categories, setCategories] = useState<any>([]);
+  const [categories, setCategories] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [published, setPublished] = useState(false);
-  const [file, setFile] = useState<any>(null);
+  const [file, setFile] = useState<File | null>(null);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -25,34 +29,38 @@ const Create = () => {
     getCategories();
   }, []);
 
-  const submit = async (e: any) => {
+  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    let formData: any = new FormData(e.target);
-    let data: any = Object.fromEntries(formData.entries());
-    let user = getUser();
+    let formData = new FormData(e.currentTarget);
+    let data = Object.fromEntries(formData.entries());
+    let user = getUser() as User | string; // Explicitly type `user`
+
+    if (typeof user === 'string') {
+      console.error('User is a string, cannot access email');
+      setLoading(false);
+      return;
+    }
+
     let uuid = v4();
-    
+
     if (file) {
       const reader = new FileReader();
       let link = "";
       reader.onloadend = async () => {
-        const base64String: any = reader.result;
+        const base64String = reader.result as string;
         const base64Data = base64String?.replace(/^data:image\/[a-z]+;base64,/, "");
-        const result = await uploadFiletoS3(base64Data).then((res)=>{
-          console.log("result is ", res);
-          link = res;
-        })
+        const result = await uploadFiletoS3(base64Data);
+        link = result;
 
-        data = { ...data, email: user?.email , uuid: uuid, image: link, published: published as unknown as FormDataEntryValue};
+        data = { ...data, email: user.email, uuid: uuid, image: link, published: published as unknown as FormDataEntryValue };
         data = JSON.parse(JSON.stringify(data));
         setLoading(true);
-        let post = await createPost(data);
+        await createPost(data);
         setLoading(false);
-        let routerLink = `/post/${uuid}`;
-        router.push(routerLink);
+        router.push(`/post/${uuid}`);
       };
-      reader.readAsDataURL(file); 
+      reader.readAsDataURL(file);
     }
   };
 
@@ -65,7 +73,7 @@ const Create = () => {
       <Navbar />
       <form onSubmit={submit} className={Styles.createPost}>
         <input
-          onChange={(e) => setFile(e.target.files && e.target.files[0])}
+          onChange={(e) => setFile(e.target.files ? e.target.files[0] : null)}
           name="image"
           id="file"
           type="file"
