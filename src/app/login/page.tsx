@@ -9,7 +9,7 @@ import { useState } from 'react'
 import {useRouter} from "next/navigation"
 
 
-const page = ({children, href}) => {
+const page = ({children, href}: {children: any, href: any}) => {
 
   const router = useRouter();
   const [err, useErrState] = useState({
